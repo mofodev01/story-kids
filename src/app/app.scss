@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+ion-content {
+    background-color: #01070a  !important;
+    font-family:'Raleway';
+}
+
+.listcolor{
+    background-color: #01070a ; 
+}
+.fontcolor{
+    ////font-size: x-small;
+    color:rgb(250, 32, 3);
+}
+

@@ -1,35 +1,98 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+////import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+///import { HomePage } from '../pages/home/home';
+import { LivePage } from '../pages/live/live';
+////import { AnimePage } from '../pages/anime/anime';
+import { FavoratePage } from '../pages/favorate/favorate';
+import { FilmsPage } from '../pages/films/films';
+import { SeriesPage } from '../pages/series/series';
+import { FilterPage } from '../pages/filter/filter';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
+
+import { StreamingMedia } from '@ionic-native/streaming-media';
+import { JsonDataProvider } from '../providers/json-data/json-data';
+import { SearchPipe } from '../pipes/search/search';
+import { SortPipe } from '../pipes/sort/sort';
+import { Toast } from '@ionic-native/toast';
+
+import { HttpClientModule } from '@angular/common/http';
+import { DatabaseProvider } from '../providers/database/database';
+///import { IonicStorageModule } from '@ionic/storage';
+import { SQLitePorter } from '@ionic-native/sqlite-porter';
+import { SQLite } from '@ionic-native/sqlite';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { Market } from '@ionic-native/market';
+import { AdMobFree } from '@ionic-native/admob-free';
+
+
+
+////https://ionicacademy.com/ionic-searchable-select-component/
+import { SelectSearchableModule } from 'ionic-select-searchable';
+
+
+
+
+
+/**/
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    ///HomePage,
+    LivePage,
+    SearchPipe,
+  SortPipe,
+ /// AnimePage,
+  FilmsPage,
+  SeriesPage,
+  FavoratePage,
+  FilterPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+  
+    ///BrowserAnimationsModule,
+   /* IonicStorageModule.forRoot(),*/
     IonicModule.forRoot(MyApp),
+    SelectSearchableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    ///HomePage,
+    LivePage,
+    ///AnimePage,
+    FilmsPage,
+    SeriesPage,
+    FavoratePage,
+    FilterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    AdMobFree,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    StreamingMedia,
+    
+    SQLitePorter,
+    SQLite,
+    Toast,
+    SocialSharing,
+    Market,
+   
+   /**/ 
+    HttpClientModule,
+    /*IonicStorageModule,
+   */
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    JsonDataProvider,
+    DatabaseProvider,
+    AdMobFree
+   
   ]
 })
 export class AppModule {}
