@@ -5,5 +5,5 @@ echo "Not in Appflow skipping cordova hack";
 else
 echo "In Appflow...using cordova@8.1.2"
 npm uninstall -g @ionic-enterprise/cordova
-npm install -g cordova@8.1.2
+npm install -g cordova@8.0.0
 fi
