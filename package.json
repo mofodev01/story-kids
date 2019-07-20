@@ -9,9 +9,7 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    
- "preinstall": "./cordovaOverride.sh"
-
+    "preinstall": "./cordovaOverride.sh"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -23,7 +21,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
-    "@ionic-native/admob-free": "^4.20.0",
+    "@ionic-native/admob-free": "^4.12.2",
     "@ionic-native/core": "~4.20.0",
     "@ionic-native/splash-screen": "~4.20.0",
     "@ionic-native/status-bar": "~4.20.0",
