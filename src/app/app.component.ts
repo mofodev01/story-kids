@@ -158,9 +158,9 @@ export class MyApp {
         const bannerConfig: AdMobFreeBannerConfig = {
           // add your config here
           // for the sake of this example we will just use the test config
-         // isTesting: true,// Remove in production
+          isTesting: true,// Remove in production
           autoShow: true,
-          id:'ca-app-pub-3000905870244951/2118429550'
+         // id:'ca-app-pub-3000905870244951/2118429550'
 
 
          };
