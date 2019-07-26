@@ -19,18 +19,18 @@ export class DetailStoryPage {
     this.serie = "des";
 
   }
-  play_Text_eng(text: string) {
+  play_Text_eng(texteng: string) {
     this.tts.speak({
-      text: ''+text+'',
+      text: ''+texteng+'',
       
       locale: 'en-US'
     })
       .then(() => console.log('Success'))
       .catch((reason: any) => console.log(reason));
   }
-  play_Text_fr(text: string) {
+  play_Text_fr(textfr: string) {
     this.tts.speak({
-      text: ''+text+'',
+      text: ''+textfr+'',
       
       locale: 'fr-FR'
     })
@@ -38,9 +38,7 @@ export class DetailStoryPage {
       .catch((reason: any) => console.log(reason));
   }
 
-  stop() {
-    this.tts.stop()
-  }
+  
 
   ionViewDidLoad() {
 

@@ -24,10 +24,6 @@
 
   <ion-list  *ngFor="let c of data">
 
-      <button ion-button  primary (click)="play_Text_eng(c.Story)">ENG</button>
-      <button ion-button  primary (click)="play_Text_fr(c.Story_fr)">FR</button>
-      <button ion-button  primary (click)="stop()">Stop</button>
-
     <ion-card class="col-card" >
           
           <img [src]="c.image"   class="card-img"  />
