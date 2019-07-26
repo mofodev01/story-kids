@@ -21,8 +21,6 @@
     <preference name="SplashScreenDelay" value="70000" />
     <preference name="loadUrlTimeoutValue" value="60000" />
     <platform name="android">
-
-       
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -93,4 +91,5 @@
     <plugin name="cordova-sqlite-storage" spec="^2.3.3" />
     <plugin name="uk.co.workingedge.cordova.plugin.sqliteporter" spec="^1.0.5" />
     <engine name="android" spec="7.1.2" />
+    <plugin name="cordova-plugin-tts" spec="^0.2.3" />
 </widget>

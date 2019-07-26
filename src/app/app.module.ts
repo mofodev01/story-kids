@@ -30,12 +30,13 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { Market } from '@ionic-native/market';
 import { AdMobFree } from '@ionic-native/admob-free';
 
-
-
+import { KidsAgePage } from '../pages/kids-age/kids-age';
+import { StoryPage } from '../pages/story/story'
+import { DetailStoryPage } from '../pages/detail-story/detail-story'
 ////https://ionicacademy.com/ionic-searchable-select-component/
 import { SelectSearchableModule } from 'ionic-select-searchable';
 
-
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 
 
@@ -51,7 +52,10 @@ import { SelectSearchableModule } from 'ionic-select-searchable';
   FilmsPage,
   SeriesPage,
   FavoratePage,
-  FilterPage
+  FilterPage,
+  KidsAgePage,
+  StoryPage,
+  DetailStoryPage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +75,10 @@ import { SelectSearchableModule } from 'ionic-select-searchable';
     FilmsPage,
     SeriesPage,
     FavoratePage,
-    FilterPage
+    FilterPage,
+    KidsAgePage,
+    StoryPage,
+    DetailStoryPage
   ],
   providers: [
     StatusBar,
@@ -91,7 +98,8 @@ import { SelectSearchableModule } from 'ionic-select-searchable';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     JsonDataProvider,
     DatabaseProvider,
-    AdMobFree
+    AdMobFree,
+    TextToSpeech
    
   ]
 })

@@ -1,98 +1,26 @@
 page-live {
 
-  /*
-  https://www.w3schools.com/howto/howto_css_flip_card.asp
-  */
-  
-  .search-box {
-  color : rgb(250, 32, 3);
+  .sign-in-button-container {
+    padding-top: 5px;
   }
-  
-  .showbox {
-    position: relative;
-   // width: 50%;
-    text-align: center!important;
-  
-    margin-left: auto;
-  margin-right: auto;
-  }
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    
-    }
-    .iconfav{
-        color: red;
-        background:#2d3436;
-        border-radius:50%;
-       // padding: 08px 09px 06px 09px  ;
-        padding: 08px 09px 06px 09px  ;
-        border:2px solid #ffb03b; 
-        font-size: 23px;
-        margin-top: 4%;
-       
-       
-       }
-       .iconplay{
-        
-         color: #ffa318;
-         background:#2d3436;
-        border-radius:50%;
-        //padding: 07px 10px 7px 12px ;
-        padding: 07px 10px 7px 12px ;
-  
-        border:2px solid #ffb03b; 
-        font-size: 23px;
-       }
-       .showbox:hover  .middle {
-        opacity: 1;
-        }
-        .showbox:hover  .img {
-            opacity: 0.3;
-            }
-            
-            
-  
-  .thumbnail-grid{
-    display: grid ;
-    grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 3px;
-    grid-row-gap: 3px ;
-  
-  }
-  .img{
-    border-radius:6%;
-    height :100px;
-    width: 100%;
-    /*--------------------------*/
-  opacity: 1;
-  display: block;
-  border:0;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  text-align: center;
-  background-color:black;
-  }
-  div.container {
-    text-align: center;
-    padding: 5px 10px;
-  }
-  thumbnail-grid div img{
-    width: 100%;
-    height: 360px;
-  }
-  
-  @media only screen  and (max-width:700px){
-    .thumbnail-grid{
-        grid-template-columns: repeat(4,1fr);  
-    }
-    
-  }
+  .listcolor{
+    background-color: #141f20 ; 
+    border-radius: 20px !important;
+ 
+}
+.myview{
+  //https://www.google.com/search?client=firefox-b-d&biw=1366&bih=632&tbm=isch&sa=1&ei=WrI0XcTFIted1fAPy8CD6AU&q=star+icon+png+transparent+background&oq=star+icon+transparent+png&gs_l=img.1.1.0i8i30l2.219962.221762..226642...0.0..0.184.696.0j4......0....1..gws-wiz-img.......0i19j0i30i19j0i5i30i19j0i8i30i19.rf9EusGPD6o#imgdii=Ovz89JZ-1BmFbM:&imgrc=nCptHOz3LwIzwM:
+     background-image: url('../assets/imgs/stars.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.position_list_story{
+  position: absolute;
+  top: 110px;
+  width: 92%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
   }
   
