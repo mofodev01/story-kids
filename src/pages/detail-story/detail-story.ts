@@ -22,7 +22,7 @@ export class DetailStoryPage {
   play_Text_eng(text: string) {
     this.tts.speak({
       text: ''+text+'',
-      rate: 1.0,
+      
       locale: 'en-US'
     })
       .then(() => console.log('Success'))
@@ -31,7 +31,7 @@ export class DetailStoryPage {
   play_Text_fr(text: string) {
     this.tts.speak({
       text: ''+text+'',
-      rate: 1.0,
+      
       locale: 'fr-FR'
     })
       .then(() => console.log('Success'))
@@ -39,7 +39,7 @@ export class DetailStoryPage {
   }
 
   stop() {
-this.tts.stop();
+    this.tts.stop()
   }
 
   ionViewDidLoad() {
