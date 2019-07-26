@@ -9,15 +9,16 @@
 </ion-header>
 
 
-<ion-content   class="card-background-page " >
-
-  
+<ion-content   class="card-background-page" >
+    <button  (click)="play_Text_eng(c.Story)">ENG</button>
+    <button  (click)="play_Text_fr(c.Story_fr)">FR</button>
+    <button  (click)="stop()">Stop</button>
   <ion-fab left top >
     <button ion-fab color="secondary"><ion-icon name="volume-up"></ion-icon></button>
     <ion-fab-list side="right" *ngFor="let c of data">
       <button ion-fab (click)="play_Text_eng(c.Story)">ENG</button>
       <button ion-fab (click)="play_Text_fr(c.Story_fr)">FR</button>
-      <button ion-fab (click)="stop()">Stop</button>
+      
     </ion-fab-list>
   </ion-fab>
 
