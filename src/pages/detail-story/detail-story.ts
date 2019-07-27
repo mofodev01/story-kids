@@ -30,7 +30,7 @@ export class DetailStoryPage {
   }
   play_Text_fr(textfr: string) {
     this.tts.speak({
-      text: ''+textfr+'',
+      text: textfr,
       
       locale: 'fr-FR'
     })
@@ -38,7 +38,9 @@ export class DetailStoryPage {
       .catch((reason: any) => console.log(reason));
   }
 
-  
+  stop(){
+    this.tts.stop();
+  }
 
   ionViewDidLoad() {
 
