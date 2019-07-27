@@ -1,0 +1,70 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+        Home
+      </ion-title>
+    
+
+         
+
+  </ion-navbar>
+</ion-header>
+
+    <ion-content padding class="myview">
+   <div class="position_list_story">
+      <ion-row class="sign-in-button-container">
+        <ion-col text-center>
+
+      <ion-list no-lines>
+        <ion-item round class="listcolor"  (click)="push_fairytales()">
+          <ion-avatar item-start >
+            <img src="assets/imgs/fairy_tales.png">
+          </ion-avatar>
+          <h2 class="fontcolor"><strong>fairy tales</strong></h2>
+          <h2 class="fontcolor"><strong>contes de fées</strong></h2>
+          
+        </ion-item>
+      </ion-list>
+
+      <ion-list no-lines >
+        <ion-item round class="listcolor" (click)="push_folktales()">
+          <ion-avatar item-start >
+            <img src="assets/imgs/folk_tales.png">
+          </ion-avatar>
+          <h2 class="fontcolor"><strong>folk tales</strong></h2>
+          <h2 class="fontcolor"><strong>contes populaires</strong></h2>
+          
+        </ion-item>
+      </ion-list>
+
+      <ion-list no-lines>
+        <ion-item round class="listcolor" (click)="push_legends()">
+          <ion-avatar item-start >
+            <img src="assets/imgs/legends.png">
+          </ion-avatar>
+          <h2 class="fontcolor"><strong>legends </strong></h2>
+          <h2 class="fontcolor"><strong>légendes</strong></h2>
+          
+        </ion-item>
+      </ion-list>
+
+      <ion-list no-lines>
+        <ion-item round class="listcolor" (click)="push_historicalfiction()">
+          <ion-avatar item-start >
+            <img src="assets/imgs/historical.png">
+          </ion-avatar>
+          <h2 class="fontcolor"><strong>historical fiction</strong></h2>
+          <h2 class="fontcolor"><strong>fiction historique</strong></h2>
+          
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</div>
+  </ion-content>
+  

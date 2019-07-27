@@ -4,13 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 ////import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
-///import { HomePage } from '../pages/home/home';
-import { LivePage } from '../pages/live/live';
-////import { AnimePage } from '../pages/anime/anime';
-import { FavoratePage } from '../pages/favorate/favorate';
-import { FilmsPage } from '../pages/films/films';
-import { SeriesPage } from '../pages/series/series';
-import { FilterPage } from '../pages/filter/filter';
+import { HomePage } from '../pages/home/home';
+//import { LivePage } from '../pages/live/live';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +29,7 @@ import { AdMobFree } from '@ionic-native/admob-free';
 import { KidsAgePage } from '../pages/kids-age/kids-age';
 import { StoryPage } from '../pages/story/story'
 import { DetailStoryPage } from '../pages/detail-story/detail-story'
-////https://ionicacademy.com/ionic-searchable-select-component/
+
 import { SelectSearchableModule } from 'ionic-select-searchable';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
@@ -44,15 +40,11 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 @NgModule({
   declarations: [
     MyApp,
-    ///HomePage,
-    LivePage,
+    HomePage,
+   /// LivePage,
     SearchPipe,
   SortPipe,
- /// AnimePage,
-  FilmsPage,
-  SeriesPage,
-  FavoratePage,
-  FilterPage,
+ 
   KidsAgePage,
   StoryPage,
   DetailStoryPage
@@ -69,13 +61,9 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ///HomePage,
-    LivePage,
-    ///AnimePage,
-    FilmsPage,
-    SeriesPage,
-    FavoratePage,
-    FilterPage,
+    HomePage,
+   /// LivePage,
+   
     KidsAgePage,
     StoryPage,
     DetailStoryPage

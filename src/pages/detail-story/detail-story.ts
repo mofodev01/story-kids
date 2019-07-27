@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import {TextToSpeech} from '@ionic-native/text-to-speech';
+
 @Component({
   selector: 'page-detail-story',
   templateUrl: 'detail-story.html',
@@ -70,5 +71,7 @@ export class DetailStoryPage {
     });
   
 }
+
+
 
 }

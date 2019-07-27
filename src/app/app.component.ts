@@ -4,13 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
-///import { HomePage } from '../pages/home/home';
-import { LivePage } from '../pages/live/live';
-///import { AnimePage } from '../pages/anime/anime';
-import { FavoratePage } from '../pages/favorate/favorate';
-import { FilmsPage } from '../pages/films/films';
-import { SeriesPage } from '../pages/series/series';
-import { FilterPage } from '../pages/filter/filter';
+import { HomePage } from '../pages/home/home';
+///import { LivePage } from '../pages/live/live';
+
+
 
 import { Market } from '@ionic-native/market';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -27,8 +24,8 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  //rootPage: any = HomePage;
-  rootPage: any = LivePage;
+ rootPage: any = HomePage;
+ //  rootPage: any = LivePage;
 
   pages: Array<{title: string , icon: string , component: any}>;
 
@@ -41,15 +38,8 @@ export class MyApp {
     this.showBanner();
     // used for an example of ngFor and navigation   SeriesPage
     this.pages = [
-     /* { title: 'Home', component: HomePage,icon : "md-home" },*/
-      { title: 'Live', component: LivePage,icon : "md-desktop" },
-      ////{ title: 'Anime', component: AnimePage,icon : "md-body" },
-      { title: 'Films', component: FilmsPage,icon : "md-videocam" },
-      { title: 'Series', component: SeriesPage,icon : "ios-film-outline" }
-      ,
-      { title: 'Favorate', component: FavoratePage,icon : "md-bookmarks" }
-      ,
-      { title: 'Filter', component: FilterPage,icon : "search" }
+      { title: 'Home', component: HomePage,icon : "md-home" }
+     /* { title: 'Live', component: LivePage,icon : "md-desktop" }*/
     ];
 
     
