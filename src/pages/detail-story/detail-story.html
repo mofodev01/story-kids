@@ -107,6 +107,12 @@
     <div [ngSwitch]="serie">
       <ion-list *ngSwitchCase="'des'"    no-lines >
 
+          <ion-list  *ngFor="let c of data">
+              <button ion-button primary (click)="play_Text_eng(c.Story)">ENG</button>
+              <button ion-button primary (click)="play_Text_fr(c.Story_fr)">FR</button>
+              <button ion-button primary (click)="stop()">stop</button>
+            </ion-list>
+
             <ion-item color="dark"  *ngFor="let c of data">
               <h3 class="text"> {{c.title}} </h3>
               <strong   class="text">
