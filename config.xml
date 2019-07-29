@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.stories.box" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.stories.magic" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Children Stories Box</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -92,4 +92,6 @@
     <plugin name="uk.co.workingedge.cordova.plugin.sqliteporter" spec="^1.0.5" />
     <plugin name="cordova-plugin-tts" spec="^0.2.3" />
     <engine name="android" spec="7.1.2" />
+    <engine name="ios" spec="~4.5.5" />
+    <plugin name="cordova-plugin-network-information" spec="^2.0.2" />
 </widget>

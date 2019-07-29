@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,Platform } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { DetailStoryPage } from '../detail-story/detail-story'
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
@@ -11,7 +11,7 @@ export class StoryPage {
   age:any;
   type:any;
   data: any;
-  constructor( public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams,
+  constructor(public platform: Platform, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams,
     private admobFree: AdMobFree) {
     this.age = this.navParams.get('age');
     this.type = this.navParams.get('type');
@@ -55,7 +55,7 @@ push_data_story(id: Number){
 }
 
 launchInterstitial() {
-   
+  if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
           isTesting: true,// Remove in production
           autoShow: true,
@@ -71,7 +71,23 @@ launchInterstitial() {
       
   });
 
+  }else if (this.platform.is('ios')) {
+    const interstitialConfig: AdMobFreeInterstitialConfig = {
+      isTesting: true,// Remove in production
+      autoShow: true,
+  //id: Your Ad Unit ID goes here
+ //id:'ca-app-pub-3000905870244951/5491408793'
+};
 
+this.admobFree.interstitial.config(interstitialConfig);
+
+
+this.admobFree.interstitial.prepare().then(() => {
+  // success
+  
+});
+
+  }
 }
 
 }

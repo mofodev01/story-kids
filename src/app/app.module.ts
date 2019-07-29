@@ -33,7 +33,7 @@ import { DetailStoryPage } from '../pages/detail-story/detail-story'
 import { SelectSearchableModule } from 'ionic-select-searchable';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-
+import { Network } from '@ionic-native/network';
 
 
 /**/
@@ -78,7 +78,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     Toast,
     SocialSharing,
     Market,
-   
+    
    /**/ 
     HttpClientModule,
     /*IonicStorageModule,
@@ -87,6 +87,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     JsonDataProvider,
     DatabaseProvider,
     AdMobFree,
+    Network,
     TextToSpeech
    
   ]

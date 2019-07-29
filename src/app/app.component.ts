@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform ,ActionSheetController} from 'ionic-angular';
+import { Nav, Platform ,ActionSheetController,AlertController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -13,7 +13,7 @@ import { Market } from '@ionic-native/market';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
-
+import { Network } from '@ionic-native/network';
 
 
 
@@ -29,13 +29,14 @@ export class MyApp {
 
   pages: Array<{title: string , icon: string , component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, 
+  constructor(public alertCtrl: AlertController ,private network: Network,public platform: Platform, public statusBar: StatusBar, 
     public splashScreen: SplashScreen,private market: Market,
     private socialSharing: SocialSharing,
     public actionsheetCtrl: ActionSheetController,
     private admobFree: AdMobFree) {
     this.initializeApp();
     this.showBanner();
+    this.network_space();
     // used for an example of ngFor and navigation   SeriesPage
     this.pages = [
       { title: 'Home', component: HomePage,icon : "md-home" }
@@ -45,7 +46,22 @@ export class MyApp {
     
 
   }
-
+  network_space(){
+    this.network.onDisconnect().subscribe(() => {
+      let alert = this.alertCtrl.create({
+      title: "The connection failed !",
+      subTitle: "There may be a problem in your Internet connection. Try Again !",
+      buttons: [{
+  
+      text: ("Okay")
+      }]
+      });
+      alert.present();
+      });
+      this.network.onConnect().subscribe(() => {
+  
+      });
+  }
 
 
   initializeApp() {
@@ -65,10 +81,34 @@ export class MyApp {
   }
 
   rateApp(){
-    this.market.open('com.franceflix.streaming');
+    if (this.platform.is('android')) {
+    this.market.open('com.stories.magic');
+    let alert = this.alertCtrl.create({
+      title: "platform !",
+      subTitle: "is android",
+      buttons: [{
+  
+      text: ("Okay")
+      }]
+      });
+      alert.present();
+    }else if(this.platform.is('ios')){
+    this.market.open('com.stories.magic');
+    let alert = this.alertCtrl.create({
+      title: "platform !",
+      subTitle: "is ios",
+      buttons: [{
+  
+      text: ("Okay")
+      }]
+      });
+      alert.present();
+   
+    }
     }
 
     shareApp() {
+      if (this.platform.is('android')) {
       /*  this.appodeal.hide(this.appodeal.AD_TYPES.BANNER);*/
         let actionSheet = this.actionsheetCtrl.create({
           title: 'Partager',
@@ -81,7 +121,7 @@ export class MyApp {
              // cssClass: 'action-red',
               handler: () => {
                
-                  this.socialSharing.shareViaFacebook("", "", "https://play.google.com/store/apps/details?id=com.franceflix.streaming").then(() => {
+                  this.socialSharing.shareViaFacebook("", "", "https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                     console.log("shareViaFacebook: Success");
                   }).catch(() => {
                     console.error("shareViaFacebook: failed");
@@ -97,7 +137,7 @@ export class MyApp {
               icon: 'logo-whatsapp',
            
               handler: () => {
-                this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/40007xNYQNKMcy68bEChwQ.png" ,"https://play.google.com/store/apps/details?id=com.franceflix.streaming").then(() => {
+                this.socialSharing.shareViaWhatsApp("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViaWhatsApp: Success");
                 }).catch(() => {
                   console.error("shareViaWhatsApp: failed");
@@ -110,7 +150,7 @@ export class MyApp {
               icon: 'logo-twitter',
            
               handler: () => {
-                this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/40007xNYQNKMcy68bEChwQ.png" ,"https://play.google.com/store/apps/details?id=com.franceflix.streaming").then(() => {
+                this.socialSharing.shareViaTwitter("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
@@ -123,7 +163,7 @@ export class MyApp {
               icon: 'paper-plane',
             
               handler: () => {
-                this.socialSharing.share("","", "https://image.prntscr.com/image/40007xNYQNKMcy68bEChwQ.png" ,"https://play.google.com/store/apps/details?id=com.franceflix.streaming").then(() => {
+                this.socialSharing.share("","", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
@@ -142,9 +182,84 @@ export class MyApp {
         });
         actionSheet.present();
       }
+     else if (this.platform.is('ios')) {
+        /*  this.appodeal.hide(this.appodeal.AD_TYPES.BANNER);*/
+          let actionSheet = this.actionsheetCtrl.create({
+            title: 'Partager',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+              {
+                text: 'Facebook',
+                role: 'destructive',
+                icon: 'logo-facebook',
+               // cssClass: 'action-red',
+                handler: () => {
+                 
+                    this.socialSharing.shareViaFacebook("", "", "https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                      console.log("shareViaFacebook: Success");
+                    }).catch(() => {
+                      console.error("shareViaFacebook: failed");
+                    });
+                 
+                }
+              },
+           
+            
+              {
+                text: 'Whatsapp',
+                role: 'destructive',
+                icon: 'logo-whatsapp',
+             
+                handler: () => {
+                  this.socialSharing.shareViaWhatsApp("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                    console.log("shareViaWhatsApp: Success");
+                  }).catch(() => {
+                    console.error("shareViaWhatsApp: failed");
+                  });
+                }
+              },
+              {
+                text: 'Twitter',
+                role: 'destructive',
+                icon: 'logo-twitter',
+             
+                handler: () => {
+                  this.socialSharing.shareViaTwitter("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                    console.log("shareViatwitter: Success");
+                  }).catch(() => {
+                    console.error("shareViatwitter: failed");
+                  });
+                }
+              },
+              {
+                text: 'Autre',
+                role: 'destructive',
+                icon: 'paper-plane',
+              
+                handler: () => {
+                  this.socialSharing.share("","", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                    console.log("shareViatwitter: Success");
+                  }).catch(() => {
+                    console.error("shareViatwitter: failed");
+                  });
+                }
+              },
+              {
+                text: 'annuler',
+                role: 'cancel', // will always sort to be on the bottom
+                icon: 'close' ,
+                handler: () => {
+                  console.log('Cancel clicked');
+                }
+              }
+            ]
+          });
+          actionSheet.present();
+        }
+      }
 
       showBanner(){
-
+        if (this.platform.is('android')) {
         const bannerConfig: AdMobFreeBannerConfig = {
           // add your config here
           // for the sake of this example we will just use the test config
@@ -162,14 +277,28 @@ export class MyApp {
              // if we set autoShow to false, then we will need to call the show method here
            })
            .catch(e => console.log(e));
+          }
+           else if (this.platform.is('ios')) {
+            const bannerConfig: AdMobFreeBannerConfig = {
+              // add your config here
+              // for the sake of this example we will just use the test config
+              isTesting: true,// Remove in production
+              autoShow: true,
+             // id:'ca-app-pub-3000905870244951/2118429550'
+    
+    
+             };
+             this.admobFree.banner.config(bannerConfig);
+             
+             this.admobFree.banner.prepare()
+               .then(() => {
+                 // banner Ad is ready
+                 // if we set autoShow to false, then we will need to call the show method here
+               })
+               .catch(e => console.log(e));
+           }
       
       }
 
-
-      ///source push notification :  https://www.youtube.com/watch?v=xxhcKe1C4-I
-
-     
-
-      
 
 }

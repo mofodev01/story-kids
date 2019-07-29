@@ -24,11 +24,11 @@ $app-direction: ltr;
 //https://stackoverflow.com/questions/44065099/how-can-i-change-the-color-of-the-ion-title
 
 $toolbar-background: #000000;
-$toolbar-md-title-text-color: rgb(250, 32, 3);
-$toolbar-ios-title-text-color: rgb(250, 32, 3);
-$toolbar-wp-title-text-color: rgb(250, 32, 3);
+$toolbar-md-title-text-color: #fa983a;
+$toolbar-ios-title-text-color: #fa983a;
+$toolbar-wp-title-text-color: #fa983a;
 ///https://ionicframework.com/docs/api/components/searchbar/Searchbar/#sass-variables
-$searchbar-md-input-background-color : rgb(250, 32, 3);
+$searchbar-md-input-background-color : #fa983a;
 
 
 // Named Color Variables
@@ -40,7 +40,7 @@ $searchbar-md-input-background-color : rgb(250, 32, 3);
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #f25362,
+  primary:    #fa983a,
   secondary:  #32db64,
   danger:     #f25362,
   light:      #f4f4f4,
