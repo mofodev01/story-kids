@@ -1,0 +1,21 @@
+stories_kids_android
+Android
+id app :
+ca-app-pub-3000905870244951~4226344418
+
+banner:
+ca-app-pub-3000905870244951/1001894206
+Interstitiel:
+ca-app-pub-3000905870244951/9291447763
+----------------------------------------------------------------------
+stories_kids_ios
+iOS
+id app :
+ca-app-pub-3000905870244951~1712340644
+
+banner:
+ca-app-pub-3000905870244951/6197352890
+Interstitiel:
+ca-app-pub-3000905870244951/4885298890
+
+

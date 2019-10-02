@@ -57,10 +57,10 @@ push_data_story(id: Number){
 launchInterstitial() {
   if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
-          isTesting: true,// Remove in production
+        //  isTesting: true,// Remove in production
           autoShow: true,
       //id: Your Ad Unit ID goes here
-     //id:'ca-app-pub-3000905870244951/5491408793'
+     id:'ca-app-pub-3000905870244951/9291447763'
   };
 
   this.admobFree.interstitial.config(interstitialConfig);
@@ -73,10 +73,10 @@ launchInterstitial() {
 
   }else if (this.platform.is('ios')) {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      isTesting: true,// Remove in production
+     // isTesting: true,// Remove in production
       autoShow: true,
   //id: Your Ad Unit ID goes here
- //id:'ca-app-pub-3000905870244951/5491408793'
+ id:'ca-app-pub-3000905870244951/4885298890'
 };
 
 this.admobFree.interstitial.config(interstitialConfig);

@@ -83,26 +83,10 @@ export class MyApp {
   rateApp(){
     if (this.platform.is('android')) {
     this.market.open('com.stories.magic');
-    let alert = this.alertCtrl.create({
-      title: "platform !",
-      subTitle: "is android",
-      buttons: [{
-  
-      text: ("Okay")
-      }]
-      });
-      alert.present();
+    
     }else if(this.platform.is('ios')){
     this.market.open('com.stories.magic');
-    let alert = this.alertCtrl.create({
-      title: "platform !",
-      subTitle: "is ios",
-      buttons: [{
-  
-      text: ("Okay")
-      }]
-      });
-      alert.present();
+    
    
     }
     }
@@ -137,7 +121,7 @@ export class MyApp {
               icon: 'logo-whatsapp',
            
               handler: () => {
-                this.socialSharing.shareViaWhatsApp("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViaWhatsApp: Success");
                 }).catch(() => {
                   console.error("shareViaWhatsApp: failed");
@@ -150,7 +134,7 @@ export class MyApp {
               icon: 'logo-twitter',
            
               handler: () => {
-                this.socialSharing.shareViaTwitter("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
@@ -163,7 +147,7 @@ export class MyApp {
               icon: 'paper-plane',
             
               handler: () => {
-                this.socialSharing.share("","", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.share("","", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
@@ -211,7 +195,7 @@ export class MyApp {
                 icon: 'logo-whatsapp',
              
                 handler: () => {
-                  this.socialSharing.shareViaWhatsApp("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
                     console.log("shareViaWhatsApp: Success");
                   }).catch(() => {
                     console.error("shareViaWhatsApp: failed");
@@ -224,7 +208,7 @@ export class MyApp {
                 icon: 'logo-twitter',
              
                 handler: () => {
-                  this.socialSharing.shareViaTwitter("", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
                     console.log("shareViatwitter: Success");
                   }).catch(() => {
                     console.error("shareViatwitter: failed");
@@ -237,7 +221,7 @@ export class MyApp {
                 icon: 'paper-plane',
               
                 handler: () => {
-                  this.socialSharing.share("","", "https://space.iptvmedia.me/image/icon-kids.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.share("","", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
                     console.log("shareViatwitter: Success");
                   }).catch(() => {
                     console.error("shareViatwitter: failed");
@@ -263,9 +247,9 @@ export class MyApp {
         const bannerConfig: AdMobFreeBannerConfig = {
           // add your config here
           // for the sake of this example we will just use the test config
-          isTesting: true,// Remove in production
+         // isTesting: true,// Remove in production
           autoShow: true,
-         // id:'ca-app-pub-3000905870244951/2118429550'
+          id:'ca-app-pub-3000905870244951/1001894206'
 
 
          };
@@ -282,9 +266,9 @@ export class MyApp {
             const bannerConfig: AdMobFreeBannerConfig = {
               // add your config here
               // for the sake of this example we will just use the test config
-              isTesting: true,// Remove in production
+             // isTesting: true,// Remove in production
               autoShow: true,
-             // id:'ca-app-pub-3000905870244951/2118429550'
+              id:'ca-app-pub-3000905870244951/6197352890'
     
     
              };
