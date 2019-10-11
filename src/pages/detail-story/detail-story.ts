@@ -60,7 +60,7 @@ export class DetailStoryPage {
 
     this.id = this.navParams.get('id');
  
-   this.http.get('http://story-kads.iptvmedia.me/api/detail-stories.php?id='+this.id+'')
+   this.http.get('http://storykids.appmofix.com/api/detail-stories.php?id='+this.id+'')
    
     .subscribe(res => {
     

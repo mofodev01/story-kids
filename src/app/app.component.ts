@@ -12,7 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { Market } from '@ionic-native/market';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
-import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
+import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 import { Network } from '@ionic-native/network';
 
 
@@ -37,6 +37,7 @@ export class MyApp {
     this.initializeApp();
     this.showBanner();
     this.network_space();
+    this.launchInterstitial();
     // used for an example of ngFor and navigation   SeriesPage
     this.pages = [
       { title: 'Home', component: HomePage,icon : "md-home" }
@@ -277,6 +278,41 @@ export class MyApp {
                .catch(e => console.log(e));
            }
       
+      }
+      launchInterstitial() {
+        if (this.platform.is('android')) {
+        const interstitialConfig: AdMobFreeInterstitialConfig = {
+              //  isTesting: true,// Remove in production
+                autoShow: true,
+            //id: Your Ad Unit ID goes here
+           id:'ca-app-pub-3000905870244951/9291447763'
+        };
+      
+        this.admobFree.interstitial.config(interstitialConfig);
+      
+        
+        this.admobFree.interstitial.prepare().then(() => {
+            // success
+            
+        });
+      
+        }else if (this.platform.is('ios')) {
+          const interstitialConfig: AdMobFreeInterstitialConfig = {
+           // isTesting: true,// Remove in production
+            autoShow: true,
+        //id: Your Ad Unit ID goes here
+       id:'ca-app-pub-3000905870244951/4885298890'
+      };
+      
+      this.admobFree.interstitial.config(interstitialConfig);
+      
+      
+      this.admobFree.interstitial.prepare().then(() => {
+        // success
+        
+      });
+      
+        }
       }
 
 

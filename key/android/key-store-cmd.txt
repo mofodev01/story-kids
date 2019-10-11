@@ -1,4 +1,4 @@
-C:\Users\kazbi\story-kids\key\android>keytool -genkey -v -keystore MY-RELEASE-KEY.keystore -alias MY_ALIAS_NAME -keyalg RSA -keysize 2048 -validity 10000
+C:\Users\kazbi\story-kids\key\android>keytool -genkey -v -keystore KIDS-RELEASE-KEY.keystore -alias KIDS_ALIAS_NAME -keyalg RSA -keysize 2048 -validity 10000
 Entrez le mot de passe du fichier de clés :story-kids
 Ressaisissez le nouveau mot de passe :story-kids
 Quels sont vos nom et prénom ?
@@ -18,7 +18,7 @@ Est-ce CN=moustapha fouad, OU=Unknown, O=Unknown, L=taroudant, ST=souss massa, C
 
 Génération d'une paire de clés RSA de 2 048 bits et d'un certificat auto-signé (SHA256withRSA) d'une validité de 10 000 jours
         pour : CN=moustapha fouad, OU=Unknown, O=Unknown, L=taroudant, ST=souss massa, C=83000
-Entrez le mot de passe de la clé pour <MY_ALIAS_NAME>
+Entrez le mot de passe de la clé pour <KIDS_ALIAS_NAME>
         (appuyez sur Entrée s'il s'agit du mot de passe du fichier de clés) : story-kids
 Ressaisissez le nouveau mot de passe : story-kids
 [Stockage de MY-RELEASE-KEY.keystore]

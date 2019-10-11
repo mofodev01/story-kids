@@ -37,7 +37,7 @@ export class StoryPage {
     
    
    //this.http.get('http://space.iptvmedia.me/api/liste_free_server.php?username='+this.data_storage,options)
-   this.http.get('http://story-kads.iptvmedia.me/api/stories.php?genre='+this.type+'&&age='+this.age+'')
+   this.http.get('http://storykids.appmofix.com/api/stories.php?genre='+this.type+'&&age='+this.age+'')
    
     .subscribe(res => {
     
