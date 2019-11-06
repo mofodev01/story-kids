@@ -11,17 +11,14 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { StreamingMedia } from '@ionic-native/streaming-media';
+
 import { JsonDataProvider } from '../providers/json-data/json-data';
-import { SearchPipe } from '../pipes/search/search';
-import { SortPipe } from '../pipes/sort/sort';
-import { Toast } from '@ionic-native/toast';
+
+
 
 import { HttpClientModule } from '@angular/common/http';
-import { DatabaseProvider } from '../providers/database/database';
-///import { IonicStorageModule } from '@ionic/storage';
-import { SQLitePorter } from '@ionic-native/sqlite-porter';
-import { SQLite } from '@ionic-native/sqlite';
+
+
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Market } from '@ionic-native/market';
 import { AdMobFree } from '@ionic-native/admob-free';
@@ -30,7 +27,7 @@ import { KidsAgePage } from '../pages/kids-age/kids-age';
 import { StoryPage } from '../pages/story/story'
 import { DetailStoryPage } from '../pages/detail-story/detail-story'
 
-import { SelectSearchableModule } from 'ionic-select-searchable';
+
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Network } from '@ionic-native/network';
@@ -41,10 +38,7 @@ import { Network } from '@ionic-native/network';
   declarations: [
     MyApp,
     HomePage,
-   /// LivePage,
-    SearchPipe,
-  SortPipe,
- 
+   
   KidsAgePage,
   StoryPage,
   DetailStoryPage
@@ -55,8 +49,7 @@ import { Network } from '@ionic-native/network';
   
     ///BrowserAnimationsModule,
    /* IonicStorageModule.forRoot(),*/
-    IonicModule.forRoot(MyApp),
-    SelectSearchableModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,11 +64,7 @@ import { Network } from '@ionic-native/network';
   providers: [
     StatusBar,
     SplashScreen,
-    StreamingMedia,
-    
-    SQLitePorter,
-    SQLite,
-    Toast,
+
     SocialSharing,
     Market,
     
@@ -85,7 +74,7 @@ import { Network } from '@ionic-native/network';
    */
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     JsonDataProvider,
-    DatabaseProvider,
+    
     AdMobFree,
     Network,
     TextToSpeech
