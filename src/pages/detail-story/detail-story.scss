@@ -164,4 +164,11 @@ page-detail-story {
        color:color($colors,light);
       
     }
+    .col-card{
+        width: 350px;
+       // height: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
 }
