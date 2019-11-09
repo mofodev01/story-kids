@@ -16,7 +16,8 @@
     <button ion-fab color="secondary"><ion-icon name="volume-up"></ion-icon></button>
     <ion-fab-list side="right" *ngFor="let c of data">
       <button ion-fab (click)="play_Text_eng(c.Story)">Voice</button>
-      <button ion-fab (click)="play_Text_fr(c.Story_fr)">Stop</button>
+      <button ion-fab (click)="play_Text_fr()">Stop</button>
+      <!-- <button ion-fab (click)="play_Text_fr(c.Story_fr)">Stop</button>-->
       <!-- <button ion-fab (click)="stop()">Stop</button>-->
     </ion-fab-list>
   </ion-fab>

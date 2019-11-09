@@ -23,16 +23,16 @@ export class DetailStoryPage {
   play_Text_eng(texteng: string) {
     this.tts.speak({
       text: ''+texteng+'',
-      
+      rate: 0.75 ,
       locale: 'en-US'
     })
       .then(() => console.log('Success'))
       .catch((reason: any) => console.log(reason));
   }
-  play_Text_fr(textfr: string) {
+  play_Text_fr(/*textfr: string*/) {
     this.tts.speak({
-      text: ''+textfr+''
-      
+     // text: ''+textfr+''
+     text: ''
       ,locale: 'fr-FR'
     })
       .then(() => console.log('Success'))

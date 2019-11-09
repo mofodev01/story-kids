@@ -17,5 +17,9 @@ banner:
 ca-app-pub-3000905870244951/6197352890
 Interstitiel:
 ca-app-pub-3000905870244951/4885298890
+----------------------------------------------
+<plugin name="cordova-plugin-console" spec="^1.1.0" />
+"cordova-plugin-console": {},
+"cordova-plugin-console": "^1.1.0",
 
 

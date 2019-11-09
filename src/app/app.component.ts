@@ -86,7 +86,7 @@ export class MyApp {
     this.market.open('com.stories.magic');
     
     }else if(this.platform.is('ios')){
-    this.market.open('com.stories.magic');
+    this.market.open('id1487185017');
     
    
     }
@@ -180,7 +180,7 @@ export class MyApp {
                // cssClass: 'action-red',
                 handler: () => {
                  
-                    this.socialSharing.shareViaFacebook("", "", "https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                    this.socialSharing.shareViaFacebook("", "", "https://apps.apple.com/us/app/night-stories/id1487185017").then(() => {
                       console.log("shareViaFacebook: Success");
                     }).catch(() => {
                       console.error("shareViaFacebook: failed");
@@ -196,7 +196,7 @@ export class MyApp {
                 icon: 'logo-whatsapp',
              
                 handler: () => {
-                  this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/us/app/night-stories/id1487185017").then(() => {
                     console.log("shareViaWhatsApp: Success");
                   }).catch(() => {
                     console.error("shareViaWhatsApp: failed");
@@ -209,7 +209,7 @@ export class MyApp {
                 icon: 'logo-twitter',
              
                 handler: () => {
-                  this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/us/app/night-stories/id1487185017").then(() => {
                     console.log("shareViatwitter: Success");
                   }).catch(() => {
                     console.error("shareViatwitter: failed");
@@ -222,7 +222,7 @@ export class MyApp {
                 icon: 'paper-plane',
               
                 handler: () => {
-                  this.socialSharing.share("","", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/fr/app/apple-store/id375380948").then(() => {
+                  this.socialSharing.share("","", "https://image.prntscr.com/image/ajq918NQTcabPreyX8fykg.png" ,"https://apps.apple.com/us/app/night-stories/id1487185017").then(() => {
                     console.log("shareViatwitter: Success");
                   }).catch(() => {
                     console.error("shareViatwitter: failed");
