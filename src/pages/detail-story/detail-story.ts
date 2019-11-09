@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,Platform } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import {TextToSpeech} from '@ionic-native/text-to-speech';
-
+import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 @Component({
   selector: 'page-detail-story',
   templateUrl: 'detail-story.html',
@@ -16,7 +16,7 @@ export class DetailStoryPage {
   
   
 
-  constructor(private tts: TextToSpeech, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public platform: Platform,private admobFree: AdMobFree , private tts: TextToSpeech, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams) {
     this.serie = "des";
 
   }
@@ -70,6 +70,42 @@ export class DetailStoryPage {
     console.log(this.data);
     });
   
+}
+
+launchInterstitial() {
+  if (this.platform.is('android')) {
+  const interstitialConfig: AdMobFreeInterstitialConfig = {
+        //  isTesting: true,// Remove in production
+          autoShow: true,
+      //id: Your Ad Unit ID goes here
+     id:'ca-app-pub-3000905870244951/9291447763'
+  };
+
+  this.admobFree.interstitial.config(interstitialConfig);
+
+  
+  this.admobFree.interstitial.prepare().then(() => {
+      // success
+      
+  });
+
+  }else if (this.platform.is('ios')) {
+    const interstitialConfig: AdMobFreeInterstitialConfig = {
+     // isTesting: true,// Remove in production
+      autoShow: true,
+  //id: Your Ad Unit ID goes here
+ id:'ca-app-pub-3000905870244951/4885298890'
+};
+
+this.admobFree.interstitial.config(interstitialConfig);
+
+
+this.admobFree.interstitial.prepare().then(() => {
+  // success
+  
+});
+
+  }
 }
 
 

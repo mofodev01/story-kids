@@ -26,12 +26,11 @@
 
     <ion-content padding class="myview">
 <!---
-
+(click)="launchInterstitial()"
 --->
 
 <ion-list no-lines>
-    <ion-item *ngFor="let c of data" class="listcolor" (click)="push_data_story(c.id)" 
-    (click)="launchInterstitial()">
+    <ion-item *ngFor="let c of data" class="listcolor" (click)="push_data_story(c.id)" >
       <ion-avatar item-start >
         <img src="{{c.image}}">
       </ion-avatar>

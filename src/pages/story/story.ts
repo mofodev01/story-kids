@@ -54,6 +54,7 @@ push_data_story(id: Number){
   this.navCtrl.push(DetailStoryPage,{id: id});
 }
 
+
 launchInterstitial() {
   if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
