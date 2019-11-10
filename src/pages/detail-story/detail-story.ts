@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,Platform } from 'ionic-angular';
+import { NavController, NavParams,Platform,LoadingController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import {TextToSpeech} from '@ionic-native/text-to-speech';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
@@ -11,12 +11,12 @@ export class DetailStoryPage {
   id:any;
   data: any;
   serie:string;
-
+  errorMessage: string;
   
   
   
 
-  constructor(public platform: Platform,private admobFree: AdMobFree , private tts: TextToSpeech, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public platform: Platform,private admobFree: AdMobFree , private tts: TextToSpeech, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController ) {
     this.serie = "des";
 
   }
@@ -58,6 +58,12 @@ export class DetailStoryPage {
 
   get_detail_story() {
 
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+  
+    loading.present();
+
     this.id = this.navParams.get('id');
  
    this.http.get('http://storykids.appmofix.com/api/detail-stories.php?id='+this.id+'')
@@ -66,9 +72,14 @@ export class DetailStoryPage {
     
     
     this.data=res;
+    loading.dismiss();
     
     console.log(this.data);
-    });
+    },
+    error => {
+      this.errorMessage = <any>error
+         loading.dismiss();
+             });
   
 }
 

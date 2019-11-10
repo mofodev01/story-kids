@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,Platform } from 'ionic-angular';
+import { NavController, NavParams,Platform,LoadingController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { DetailStoryPage } from '../detail-story/detail-story'
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
@@ -11,8 +11,9 @@ export class StoryPage {
   age:any;
   type:any;
   data: any;
+   errorMessage: string;
   constructor(public platform: Platform, public http:  HttpClient,public navCtrl: NavController, public navParams: NavParams,
-    private admobFree: AdMobFree) {
+    private admobFree: AdMobFree, public loadingCtrl: LoadingController ) {
     this.age = this.navParams.get('age');
     this.type = this.navParams.get('type');
   }
@@ -32,6 +33,12 @@ export class StoryPage {
 
   getstory() {
 
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+  
+    loading.present();
+
     this.age = this.navParams.get('age');
     this.type = this.navParams.get('type');
     
@@ -43,9 +50,13 @@ export class StoryPage {
     
     
     this.data=res;
-    
+    loading.dismiss();
     console.log(this.data);
-    });
+    },
+    error => {
+      this.errorMessage = <any>error
+         loading.dismiss();
+             });
   
 }
 
@@ -71,6 +82,7 @@ launchInterstitial() {
       // success
       
   });
+
 
   }else if (this.platform.is('ios')) {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
