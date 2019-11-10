@@ -4,6 +4,12 @@
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
+
+    <!--forios-->
+    <allow-navigation href="http://localhost:8080/*"/>
+    <preference name="AudioCanMix" value="true" />
+    <!---->
+
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -57,6 +63,12 @@
                 <string>App would like to use your bluetooth for communication purposes</string>
             </array>
         </config-file>
+<!---->
+       <feature name="CDVWKWebViewEngine">
+  <param name="ios-package" value="CDVWKWebViewEngine" />
+</feature>
+<preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+<!---->
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
