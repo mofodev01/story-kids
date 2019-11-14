@@ -5,7 +5,7 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
 
-    <!--forios-->
+    <!--for-ios-wkwebview-->
     <allow-navigation href="http://localhost:8080/*"/>
     <preference name="AudioCanMix" value="true" />
     <!---->
@@ -63,7 +63,7 @@
                 <string>App would like to use your bluetooth for communication purposes</string>
             </array>
         </config-file>
-<!---->
+<!--for-ios-wkwebview-->
        <feature name="CDVWKWebViewEngine">
   <param name="ios-package" value="CDVWKWebViewEngine" />
 </feature>
