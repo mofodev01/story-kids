@@ -5,11 +5,6 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
 
-    <!--for-ios-wkwebview-->
-    <allow-navigation href="http://localhost:8080/*"/>
-    <preference name="AudioCanMix" value="true" />
-    <!---->
-
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
