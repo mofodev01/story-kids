@@ -31,7 +31,7 @@ import { DetailStoryPage } from '../pages/detail-story/detail-story'
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Network } from '@ionic-native/network';
-
+import { LaunchReview } from '@ionic-native/launch-review';
 
 /**/
 @NgModule({
@@ -77,7 +77,8 @@ import { Network } from '@ionic-native/network';
     
     AdMobFree,
     Network,
-    TextToSpeech
+    TextToSpeech,
+    LaunchReview
    
   ]
 })

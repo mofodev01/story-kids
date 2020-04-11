@@ -61,7 +61,7 @@ export class StoryPage {
 }
 
 push_data_story(id: Number){
-
+  this.launchInterstitial();
   this.navCtrl.push(DetailStoryPage,{id: id});
 }
 
