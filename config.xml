@@ -112,4 +112,5 @@
     <plugin name="cordova-plugin-network-information" spec="^2.0.2" />
     <plugin name="cordova-custom-config" spec="^5.1.0" />
     <plugin name="cordova-launch-review" spec="^3.1.1" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
 </widget>
